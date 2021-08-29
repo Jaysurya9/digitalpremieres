@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -83,15 +84,11 @@ border: none;
 background: black;
 border-radius: 4px;
 }
-	
-.footer {
-   position: fixed;
-   left: 0;
-   bottom: 0;
-   width: 100%;
-   background-color: black;
-   color: white;
-   text-align: center;
+
+img {
+  max-width: 100%;
+  height: auto;
+  aspect-ratio: 2/3;
 }
 	
 </style>
@@ -149,12 +146,7 @@ border-radius: 4px;
     
     </main>
     
-<!-- / Section Main -->   
-	
-<div class="footer">
-  © 2021 Copyright:
-    <a href="https://m.digitalpremieres.in/"> Digital Premieres</a>
-</div>
+<!-- / Section Main -->  
 
 </center>
 </body>
@@ -251,7 +243,7 @@ border-radius: 4px;
             movieEl.innerHTML = `    
             
         <div class="w3-container w3-col s6 m3 l2 ">
-            <img class="img-responsive img-rounded"  src="${poster_path? IMG_URL + poster_path: "http://via.placeholder.com/1080x1580/000000/FFFFFF/?text=No Poster Available"  }" alt="${title} style="width:100%;">
+            <img class="w3-card img-responsive img-rounded"  src="${poster_path? IMG_URL + poster_path: "http://via.placeholder.com/1080x1580/000000/FFFFFF/?text=No Poster Available"  }" alt="${title}  width="100%">
             
             <p>
             
