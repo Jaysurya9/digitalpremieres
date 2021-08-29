@@ -1,2 +1,3 @@
 # digitalpremieres
-m.digitalpremieres.in
+
+https://m.digitalpremieres.in/
