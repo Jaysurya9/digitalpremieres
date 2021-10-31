@@ -1,3 +1,3 @@
 # digitalpremieres
 
-https://m.digitalpremieres.in/
+https://digitalpremieres.netlify.com/
