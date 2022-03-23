@@ -1,3 +1,3 @@
-# digitalpremieres
+# premieres
 
-https://digitalpremieres.netlify.com/
+https://premieres.netlify.com/
