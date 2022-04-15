@@ -17,11 +17,7 @@
 	<meta content='website' property='og:type'/>
 	<meta content='en_US' property='og:locale'/>
 	
-	<!-- GeoLocation Meta Tags -->
-	<meta content='20.593684; 78.96288' name='geo.position'/>
-	<meta content='INDIA' name='geo.placename'/>
-	<meta content='ISO 3166-2:IN' name='geo.region'/>
-	<meta content='IN' name='country'/>
+	<meta content='US' name='country'/>
 	<link href='https://movie.premieres.in/' rel='canonical'/>
 	
 	<meta content='summary_large_image' name='twitter:card'/>
@@ -155,11 +151,11 @@ img {
     const IMG_URL_ORI = 'https://image.tmdb.org/t/p/original';
     const searchURL = BASE_URL + '/search/movie?'+API_KEY;
 
-    const DiscoverMovies = BASE_URL + '/discover/movie?'+ API_KEY+'&language=en-IN&region=IN';
+    const DiscoverMovies = BASE_URL + '/discover/movie?'+ API_KEY+'&language=en-US&region=US';
 
-    const DiscoverMovies_Popularity_DESC = BASE_URL + '/discover/movie?&region=IN&sort_by=popularity.desc&'+ API_KEY+'&language=en-IN';
+    const DiscoverMovies_Popularity_DESC = BASE_URL + '/discover/movie?&region=US&sort_by=popularity.desc&'+ API_KEY+'&language=en-US';
 
-    const Most_Popular_Movies = BASE_URL + '/discover/movie?&region=IN&sort_by=popularity.desc&'+API_KEY+'&language=en';
+    const Most_Popular_Movies = BASE_URL + '/discover/movie?&region=US&sort_by=popularity.desc&'+API_KEY+'&language=en-US';
 
     // Get a list of the current popular movies on TMDB. This list updates daily.
     const Popular_Movies = BASE_URL + '/movie/popular?' + API_KEY + LANG + '&page=1' ;
@@ -191,13 +187,13 @@ img {
     const Trending_Persons_Last_7d = BASE_URL + '/trending/person/week?' + API_KEY;
 
 
-    const Telugu_Movies = BASE_URL + '/discover/movie?&region=IN&' + API_KEY + '&with_original_language=te';
+    const Telugu_Movies = BASE_URL + '/discover/movie?&region=US&' + API_KEY + '&with_original_language=te';
 
-    const Tamil_Movies = BASE_URL + '/discover/movie?&region=IN&' + API_KEY + '&with_original_language=ta';
+    const Tamil_Movies = BASE_URL + '/discover/movie?&region=US&' + API_KEY + '&with_original_language=ta';
 
-    const English_Movies = BASE_URL + '/discover/movie?&region=IN&' + API_KEY + '&with_original_language=en';
+    const English_Movies = BASE_URL + '/discover/movie?&region=US&' + API_KEY + '&with_original_language=en';
 
-    const Hindi_Movies = BASE_URL + '/discover/movie?&region=IN&' + API_KEY + '&with_original_language=hi';
+    const Hindi_Movies = BASE_URL + '/discover/movie?&region=US&' + API_KEY + '&with_original_language=hi';
 
     const Malayalam_Movies = BASE_URL + '/discover/movie?' + API_KEY + '&with_original_language=ml';
 
