@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en-US">
 <head>
@@ -173,45 +172,36 @@ aspect-ratio: 2/3;
     const main = document.getElementById('main');
     const form =  document.getElementById('form');
     const search = document.getElementById('search');
-
     
-    
-    getMovies(Trending_Movies_Last_7d)
+    getMovies(Trending_All_Last_24h)
 
     // Get Movies
     function getMovies(url) {
       fetch(url).then(res => res.json()).then(data => {
         console.log(data.results)
         showMovies(data.results);
-
       })
     }
     
     // Show Movies
     function showMovies(data) {
-        main.innerHTML = '';
-
-        data.forEach(movie => {
-          const {title, poster_path, backdrop_path, popularity, vote_count, vote_average, overview, release_date, adult, original_title, original_language, video, id, provider_name, logo_path} = movie;
-          const movieEl = document.createElement('div');
-          movieEl.classList.add('movie');
-          movieEl.innerHTML = `<div class="w3-container w3-col s6 m3 l2 ">
-    <img class="w3-card img-responsive img-rounded"  src="${poster_path? IMG_URL + poster_path: "http://via.placeholder.com/1080x1580/000000/FFFFFF/?text=No Poster Available"  }" alt="${title}  width="100" height="100">
-    <p>
-
-    </p>
-      </div>`
-          main.appendChild(movieEl);
+      main.innerHTML = '';
+      data.forEach(movie => {
+      const {title, poster_path, backdrop_path, popularity, vote_count, vote_average, overview, release_date, adult, original_title, original_language, video, id, provider_name, logo_path} = movie;
+      const movieEle = document.createElement('div');
+      movieEle.classList.add('movie');
+      movieEle.innerHTML = `<div class="w3-container w3-col s6 m4 l2 ">
+    <img class="w3-card img-responsive img-rounded" alt="${title}  width="100" height="100" src="${poster_path? IMG_URL + poster_path: "http://via.placeholder.com/1080x1580/000000/FFFFFF/?text=No Poster Available" }"><p>
+    
+    </p></div>`
+          main.appendChild(movieEle);
         })
     }
 
     // Movie Search Function
     form.addEventListener('submit', (e) => {
-
       e.preventDefault();
-
       const searchTerm = search.value;
-
       if(searchTerm){
         getMovies(searchURL+'&query='+searchTerm)
       }
