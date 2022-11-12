@@ -5,7 +5,7 @@
     <meta charset="utf-8" />
     <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <script src="/premieres.js"></script>
+    <script src="https://premieres.netlify.app/premieres.js"></script>
     <!-- SEO -->
 	<!-- Primary Meta Tags -->
 	<title>Movie Premieres -Trending Movie, Web Series, TV Shows</title>
@@ -107,18 +107,18 @@ aspect-ratio: 2/3;
           <li class="dropdown">
           <a  class="dropdown-toggle" data-toggle="dropdown" href="#">Movies<span class="caret"></span></a>
             <ul class="dropdown-menu">
+              <li><a onClick=getMovies(English_Movies) href="#">English</a></li>
               <li><a onClick=getMovies(Telugu_Movies) href="#">Telugu</a></li>
               <li><a onClick=getMovies(Hindi_Movies) href="#">Hindi</a></li>
-              <li><a onClick=getMovies(English_Movies) href="#">English</a></li>
               <li><a onClick=getMovies(Tamil_Movies) href="#">Tamil</a></li>
-              <li><a onClick=getMovies(Malayalam_Movies) href="#">Malayalam</a></li>
               <li><a onClick=getMovies(Kannada_Movies) href="#">Kannada</a></li>
+              <li><a onClick=getMovies(Malayalam_Movies) href="#">Malayalam</a></li>  
             </ul>
           </li>
         </ul>
         <form id="form">
-                <input type="text" placeholder="Search Movie/Show" id="search" class="search">
-                <button id="search" class="search">Search</button>
+           	<input type="text" placeholder="Search Movie/Show" id="search" class="search">
+            <button id="search" class="search">Search</button>
         </form>
       </div>
     </nav>
