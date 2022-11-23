@@ -2,4 +2,4 @@ User-agent: *
 Disallow: /cdn-cgi/l/email-protection
 Allow: /
 
-Sitemap: https://premieres.netlify.app/sitemap.xml
+Sitemap: https://movie.premieres.in/sitemap.xml
