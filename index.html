@@ -56,177 +56,80 @@
 	
 </head>
 
-<style>	
-body{
-background-color: cornsilk;
-background-position: center;
-background-image: url("");
-min-height: 100%;
-}
-button {
-background-color: black;
-color: white;
-padding: 10px;
-margin: 8px 0;
-border: none;
-cursor: pointer;
-width: 18%;
-opacity: 0.9;
-border-radius: 4px;
-}
-button:hover {
-background-color: blue;
-border-radius: 4px;
-opacity: 100;
-}
-
-input[type=text]{
-color: white;
-width: 40%;
-padding: 10px;
-display: inline-block;
-border: none;
-background: black;
-border-radius: 4px;
-}
-img {
-max-width: 100%;
-height: auto;
-aspect-ratio: 2/3;
-}	
-</style>
-	
-<body>
-  <center>
-  
-    <!-- NavBar Section -->
-    <nav class="navbar navbar-inverse">
-      <div class="container-fluid">
-        <div class="navbar-header">
-          <a class="navbar-brand" href="/">MOVIE PREMIERES</a>
-        </div>
-        <ul class="nav navbar-nav">
-          <li><a href="/">Home</a></li>
-          <li class="dropdown">
-            <a  class="dropdown-toggle" data-toggle="dropdown" href="#">Trending
-            <span class="caret"></span></a>
-            <ul class="dropdown-menu">
-              <li><a onClick=getMovies(Trending_All_Last_24h) href="#">Today</a></li>
-              <li><a onClick=getMovies(Trending_All_Last_7d) href="#">Last Week</a></li>
-              <li><a onClick=getMovies(Trending_Movies_Last_24h) href="#">Movies Today</a></li>
-              <li><a onClick=getMovies(Trending_Movies_Last_7d) href="#">Movies Last Week</a></li>
-              <li><a onClick=getMovies(Trending_Shows_Last_24h) href="#">Shows Today</a></li>
-              <li><a onClick=getMovies(Trending_Shows_Last_7d) href="#">Shows Last Week</a></li>
-            </ul>
-          </li>
-          <li class="dropdown">
-          <a  class="dropdown-toggle" data-toggle="dropdown" href="#">Movies<span class="caret"></span></a>
-            <ul class="dropdown-menu">
-              <li><a onClick=getMovies(English_Movies) href="#">English</a></li>
-              <li><a onClick=getMovies(Telugu_Movies) href="#">Telugu</a></li>
-              <li><a onClick=getMovies(Hindi_Movies) href="#">Hindi</a></li>
-              <li><a onClick=getMovies(Tamil_Movies) href="#">Tamil</a></li>
-              <li><a onClick=getMovies(Kannada_Movies) href="#">Kannada</a></li>
-              <li><a onClick=getMovies(Malayalam_Movies) href="#">Malayalam</a></li>  
-            </ul>
-          </li>
-        </ul>
-        <form id="form">
-           	<input type="text" placeholder="Search Movie/Show" id="search" class="search">
-            <button id="search" class="search">Search</button>
-        </form>
-      </div>
+<body >
+<header>
+  <form id="form1">
+    <nav>
+      <div class="navbar">
+        <i class='bx bx-menu'></i>
+        <div class="logo"><a href="#">PREMIERES.IN</a></div>
+        <div class="nav-links">
+          <div class="sidebar-logo">
+            <span class="logo-name">PREMIERES.IN</span>
+            <i class='bx bx-x' ></i>
+          </div>
+          
+          <ul class="links">
+            <li><a href="index.html" >HOME</a></li>
+            <li><a href="#" id="trending">TRENDING</a></li>
+            <li>
+              <a href="#">LANGUAGES</a>
+              <i class='bx bxs-chevron-down htmlcss-arrow arrow  '></i>
+              <ul class="htmlCss-sub-menu sub-menu">
+                <li><a href="#" id="english" >English</a></li>
+                <li><a href="#" id="telugu" >Telugu</a></li>
+                <li><a href="#" id="tamil" >Tamil</a></li>
+                <li><a href="#" id="hindi">Hindi</a></li>
+                <li><a href="#" id="kannada" >Kannada</a></li>
+                <li><a href="#" id="malayalam" >Malayalam</a></li>
+                    <li class="more">
+                      <span><a href="#">MORE</a>
+                      <i class='bx bxs-chevron-right arrow more-arrow'></i>
+                    </span>
+                    
+                    </li>
+                  </ul>
+                </li>
+                <li>
+                  <a href="#">MORE</a>
+                  <i class='bx bxs-chevron-down js-arrow arrow '></i>
+                  <ul class="js-sub-menu sub-menu"></ul>
+                </li>
+              </ul>
+            </div>
+            <div class="search-box" >
+              <i class='bx bx-search'></i>
+              <div class="input-box">
+                <input type="text"  id="search279" placeholder="Search...">
+                <button type="submit"  id="search279">Enter</button>
+              </div>
+            </div>
+          </div>
     </nav>
-    <!-- /NavBar Section -->
+  </form>
+</header>
 
-    <!-- Body Main -->
-        <main id="main"></main>
-    <!-- /Body Main --> 
+<br><br><br>
+
+<div id="form">
+  <main id="main"></main>
+</div>
+
+<div id="tags"></div>
     
-  </center>
-	
-<!-- Cloudflare Web Analytics --><script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "437a459dd81d44aba00a4675543d5c19"}'></script><!-- End Cloudflare Web Analytics -->
+<div id="myNav" class="overlay">
+    <!-- Button to close the overlay navigation -->
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+    <!-- Overlay content -->
+    <div class="overlay-content" id="overlay-content"></div>
+</div>
+
+<div class="pagination">
+  <div class="page" id="prev" href="#">Previous Page</div>
+  <div class="current" id="current" href="#" >1</div>
+  <div class="page" id="next" href="#" >Next Page</div>
+</div>
+
+<script src="/script.js"></script>
 </body>
 </html>
-
-<!-- Function Script -->
-<script>
-	//The Movie Data Base
-    const API_KEY = 'api_key=9a85a018f878f3af62f324c75c332248';
-    const BASE_URL = 'https://api.themoviedb.org/3';
-    const LANG = '&language=en'
-    const IMG_URL = 'https://image.tmdb.org/t/p/w500';
-    const OrginalIMG_URL = 'https://image.tmdb.org/t/p/original';
-    const searchURL = BASE_URL + '/search/movie?'+API_KEY;
-    
-    const DiscoverMovies = BASE_URL + '/discover/movie?'+ API_KEY+'&language=en-US&region=US';
-    const DiscoverMovies_Popularity_DESC = BASE_URL + '/discover/movie?&region=US&sort_by=popularity.desc&'+ API_KEY+'&language=en-US';    
-    const Most_Popular_Movies = BASE_URL + '/discover/movie?&region=US&sort_by=popularity.desc&'+API_KEY+'&language=en-US';
-
-    // Get list of the current popular movies on TMDB
-    const Popular_Movies = BASE_URL + '/movie/popular?' + API_KEY + LANG + '&page=1' ;
-    const Upcoming_Movies = BASE_URL + '/movie/upcoming?' + API_KEY + LANG + '&page=1' ;
-    const Top_Rated_Movies = BASE_URL + '/movie/top_rated?' + API_KEY + LANG + '&page=1' ;
-    const Movies_NowPlaying = BASE_URL + '/movie/now_playing?' + API_KEY + LANG + '&page=1' ;
-    const Movies_Latest = BASE_URL + '/movie/latest?' + API_KEY;
-    
- 	// Get list of Trending Topics on TMDB
-    const Trending_All_Last_24h = BASE_URL + '/trending/all/day?' + API_KEY;
-    const Trending_All_Last_7d = BASE_URL + '/trending/all/week?' + API_KEY;
-    const Trending_Movies_Last_24h = BASE_URL + '/trending/movie/day?' + API_KEY;
-    const Trending_Movies_Last_7d = BASE_URL + '/trending/movie/week?' + API_KEY;
-    const Trending_Shows_Last_24h = BASE_URL + '/trending/tv/day?' + API_KEY;
-    const Trending_Shows_Last_7d = BASE_URL + '/trending/tv/week?' + API_KEY;
-    const Trending_Persons_Last_24h = BASE_URL + '/trending/person/day?' + API_KEY;
-    const Trending_Persons_Last_7d = BASE_URL + '/trending/person/week?' + API_KEY;
-
-
-    const Telugu_Movies = BASE_URL + '/discover/movie?&region=US&' + API_KEY + '&with_original_language=te';
-    const Tamil_Movies = BASE_URL + '/discover/movie?&region=US&' + API_KEY + '&with_original_language=ta';
-    const English_Movies = BASE_URL + '/discover/movie?&region=US&' + API_KEY + '&with_original_language=en';
-    const Hindi_Movies = BASE_URL + '/discover/movie?&region=US&' + API_KEY + '&with_original_language=hi';
-    const Malayalam_Movies = BASE_URL + '/discover/movie?' + API_KEY + '&with_original_language=ml';
-
-    const main = document.getElementById('main');
-    const form =  document.getElementById('form');
-    const search = document.getElementById('search');
-    
-    getMovies(Trending_All_Last_24h)
-
-    // Get Movies
-    function getMovies(url) {
-      fetch(url).then(res => res.json()).then(data => {
-        console.log(data.results)
-        showMovies(data.results);
-      })
-    }
-    
-    // Show Movies
-    function showMovies(data) {
-      main.innerHTML = '';
-      data.forEach(movie => {
-      const {title, poster_path, backdrop_path, popularity, vote_count, vote_average, overview, release_date, adult, original_title, original_language, video, id, provider_name, logo_path} = movie;
-      const movieEle = document.createElement('div');
-      movieEle.classList.add('movie');
-      movieEle.innerHTML = `<div class="w3-container w3-col s6 m4 l2 ">
-    <img class="w3-card img-responsive img-rounded" alt="${title}  width="100" height="100" src="${poster_path? IMG_URL + poster_path: "http://via.placeholder.com/1080x1580/000000/FFFFFF/?text=No Poster Available" }"><p>
-    
-    </p></div>`
-          main.appendChild(movieEle);
-        })
-    }
-
-    // Movie Search Function
-    form.addEventListener('submit', (e) => {
-      e.preventDefault();
-      const searchTerm = search.value;
-      if(searchTerm){
-        getMovies(searchURL+'&query='+searchTerm)
-      }
-      else{
-        getMovies(API_URL);
-      }
-    })
-    
-</script>
-<!-- /Function Script -->
