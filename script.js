@@ -130,7 +130,7 @@ var z=gfg_Run();
 /* English Movies */
 
 for (var i = 0; i < z.length; i++) {
-  if(Object.values(z)[i]=="trending"){
+  if(Object.values(z)[i]=="trending-english-movies"){
     document.getElementById(Object.values(z)[i]).addEventListener("click", function() {
       getMovies(TrendingEnglishMovies);
     });
