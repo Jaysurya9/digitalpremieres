@@ -1,4 +1,4 @@
-//=====================================menu bar===================================================
+/* Menu Bar */
 let navbar = document.querySelector(".navbar");
 let searchBox = document.querySelector(".search-box .bx-search");
 
@@ -42,14 +42,57 @@ const API_KEY = 'api_key=9a85a018f878f3af62f324c75c332248';
 const IMG_URL = 'https://image.tmdb.org/t/p/w500';
 const searchURL = BASE_URL + '/search/movie?'+API_KEY;
 
-const API_URL = BASE_URL + '/discover/movie?'+API_KEY+'&region=US&&with_original_language=en';
-const TAMIL_URL = BASE_URL + '/discover/movie?region=IN&'+API_KEY+'&with_original_language=ta';
-const HINDI_URL = BASE_URL + '/discover/movie?region=IN&'+API_KEY+'&with_original_language=hi';
-const KANNADA_URL = BASE_URL + '/discover/movie?primary_release_year=2019&region=IN&'+API_KEY+'&with_original_language=kn';
-const TELUGU_URL = BASE_URL + '/discover/movie?'+API_KEY+'&primary_release_year=2023&with_original_language=te&page=1';
-const MALAYALAM_URL = BASE_URL + '/discover/movie?region=IN&'+API_KEY+'&with_original_language=ml';
-const ENGLISH_URL = BASE_URL + '/discover/movie?'+API_KEY+'&with_original_language=en&page=4';
-const TRENDING_URL = BASE_URL + '/trending/all/day?'+API_KEY+'&page=1';
+const TrendingMoviesShowsInUSToday = BASE_URL + '/trending/all/day?'+API_KEY+'&region=US&&with_original_language=en';
+
+const TrendingEnglishMovies = BASE_URL + '/discover/movie?'+API_KEY+'&region=US&&with_original_language=en';
+const EnglishMovies2023 = BASE_URL + '/discover/movie?'+API_KEY+'&primary_release_year=2023&with_original_language=en';
+const EnglishMovies2022 = BASE_URL + '/discover/movie?'+API_KEY+'&primary_release_year=2022&with_original_language=en';
+const EnglishMovies2021 = BASE_URL + '/discover/movie?'+API_KEY+'&primary_release_year=2021&with_original_language=en';
+const EnglishMovies2020 = BASE_URL + '/discover/movie?'+API_KEY+'&primary_release_year=2020&with_original_language=en';
+const EnglishMovies2019 = BASE_URL + '/discover/movie?'+API_KEY+'&primary_release_year=2019&with_original_language=en';
+const EnglishMovies2018 = BASE_URL + '/discover/movie?'+API_KEY+'&primary_release_year=2018&with_original_language=en';
+
+const TrendingTeluguMovies = BASE_URL + '/discover/movie?'+API_KEY+'&with_original_language=te';
+const TeluguMovies2023 = BASE_URL + '/discover/movie?'+API_KEY+'&primary_release_year=2023&with_original_language=te';
+const TeluguMovies2022 = BASE_URL + '/discover/movie?'+API_KEY+'&primary_release_year=2022&with_original_language=te';
+const TeluguMovies2021 = BASE_URL + '/discover/movie?'+API_KEY+'&primary_release_year=2021&with_original_language=te';
+const TeluguMovies2020 = BASE_URL + '/discover/movie?'+API_KEY+'&primary_release_year=2020&with_original_language=te';
+const TeluguMovies2019 = BASE_URL + '/discover/movie?'+API_KEY+'&primary_release_year=2019&with_original_language=te';
+const TeluguMovies2018 = BASE_URL + '/discover/movie?'+API_KEY+'&primary_release_year=2018&with_original_language=te';
+
+const TrendingHindiMovies = BASE_URL + '/discover/movie?'+API_KEY+'&with_original_language=hi';
+const HindiMovies2023 = BASE_URL + '/discover/movie?'+API_KEY+'&primary_release_year=2023&with_original_language=hi';
+const HindiMovies2022 = BASE_URL + '/discover/movie?'+API_KEY+'&primary_release_year=2022&with_original_language=hi';
+const HindiMovies2021 = BASE_URL + '/discover/movie?'+API_KEY+'&primary_release_year=2021&with_original_language=hi';
+const HindiMovies2020 = BASE_URL + '/discover/movie?'+API_KEY+'&primary_release_year=2020&with_original_language=hi';
+const HindiMovies2019 = BASE_URL + '/discover/movie?'+API_KEY+'&primary_release_year=2019&with_original_language=hi';
+const HindiMovies2018 = BASE_URL + '/discover/movie?'+API_KEY+'&primary_release_year=2018&with_original_language=hi';
+
+const TrendingTamilMovies = BASE_URL + '/discover/movie?'+API_KEY+'&with_original_language=ta';
+const TamilMovies2023 = BASE_URL + '/discover/movie?'+API_KEY+'&primary_release_year=2023&with_original_language=ta';
+const TamilMovies2022 = BASE_URL + '/discover/movie?'+API_KEY+'&primary_release_year=2022&with_original_language=ta';
+const TamilMovies2021 = BASE_URL + '/discover/movie?'+API_KEY+'&primary_release_year=2021&with_original_language=ta';
+const TamilMovies2020 = BASE_URL + '/discover/movie?'+API_KEY+'&primary_release_year=2020&with_original_language=ta';
+const TamilMovies2019 = BASE_URL + '/discover/movie?'+API_KEY+'&primary_release_year=2019&with_original_language=ta';
+const TamilMovies2018 = BASE_URL + '/discover/movie?'+API_KEY+'&primary_release_year=2018&with_original_language=ta';
+
+const TrendingKannadaMovies = BASE_URL + '/discover/movie?'+API_KEY+'&with_original_language=kn';
+const KannadaMovies2023 = BASE_URL + '/discover/movie?'+API_KEY+'&primary_release_year=2023&with_original_language=kn';
+const KannadaMovies2022 = BASE_URL + '/discover/movie?'+API_KEY+'&primary_release_year=2022&with_original_language=kn';
+const KannadaMovies2021 = BASE_URL + '/discover/movie?'+API_KEY+'&primary_release_year=2021&with_original_language=kn';
+const KannadaMovies2020 = BASE_URL + '/discover/movie?'+API_KEY+'&primary_release_year=2020&with_original_language=kn';
+const KannadaMovies2019 = BASE_URL + '/discover/movie?'+API_KEY+'&primary_release_year=2019&with_original_language=kn';
+const KannadaMovies2018 = BASE_URL + '/discover/movie?'+API_KEY+'&primary_release_year=2018&with_original_language=kn';
+
+
+const TrendingMalayalamMovies = BASE_URL + '/discover/movie?'+API_KEY+'&with_original_language=ml';
+const MalayalamMovies2023 = BASE_URL + '/discover/movie?'+API_KEY+'&primary_release_year=2023&with_original_language=ml';
+const MalayalamMovies2022 = BASE_URL + '/discover/movie?'+API_KEY+'&primary_release_year=2022&with_original_language=ml';
+const MalayalamMovies2021 = BASE_URL + '/discover/movie?'+API_KEY+'&primary_release_year=2021&with_original_language=ml';
+const MalayalamMovies2020 = BASE_URL + '/discover/movie?'+API_KEY+'&primary_release_year=2020&with_original_language=ml';
+const MalayalamMovies2019 = BASE_URL + '/discover/movie?'+API_KEY+'&primary_release_year=2019&with_original_language=ml';
+const MalayalamMovies2018 = BASE_URL + '/discover/movie?'+API_KEY+'&primary_release_year=2018&with_original_language=ml';
+
 
 const main = document.getElementById('main');
 const form =  document.getElementById('form');
@@ -66,112 +109,382 @@ var prevPage = 3;
 var lastUrl = '';
 var totalPages = 100;
 
-getMovies(API_URL);
+getMovies(TrendingMoviesShowsInUSToday);
 
+/* Get Movie and Shows Data Functions */
 
-//-----------------------------------------------------------------
 var el_up = document.getElementById("");
-		var el_down = document.getElementById("");
-		//el_up.innerHTML = "Click on the button to get "
-							//+ "all IDs in an array.";
-
-		function gfg_Run() {
-			var ID = [];
-			$("*").each(function() {
-				if (this.id) {
-					ID.push(this.id);
-				}
-			});
-			//el_down.innerHTML = ID;
-            return ID;
-		}
-        var z=gfg_Run();
-        //alert(z);
-        //alert(z.length);
-        //alert(Object.values(z)[0]);
+var el_down = document.getElementById("");
+function gfg_Run() {
+  var ID = [];
+  $("*").each(function() {
+    if (this.id) {
+      ID.push(this.id);
+    }
+  });
+        return ID;
+}
+var z=gfg_Run();
 
 
-        for (var i = 0; i < z.length; i++) {
-                        if(Object.values(z)[i]=="tamil"){
-                                                    var xy=TAMIL_URL;
-                                                    document.getElementById(Object.values(z)[i]).addEventListener("click", function() {
-                                                    getMovies(xy);
-                                                    //alert("Hello World!"+xy);
-                                                    });
-                        //alert(Object.values(z)[i]);
-                        //alert(xy);
-                        }
-                        }
-        for (var i = 0; i < z.length; i++) {
-                        if(Object.values(z)[i]=="hindi"){
-                                                    var xyz=HINDI_URL;
-                                                    document.getElementById(Object.values(z)[i]).addEventListener("click", function() {
-                                                    getMovies(xyz);
-                                                    //alert("Hello World!"+xy);
-                                                    });
-                        //alert(Object.values(z)[i]);
-                        //alert(xy);
-                        }
-                    }
-        for (var i = 0; i < z.length; i++) {
-                        if(Object.values(z)[i]=="kannada"){
-                                                    //var k=KANNADA_URL;
-                                                    document.getElementById(Object.values(z)[i]).addEventListener("click", function() {
-                                                    getMovies(KANNADA_URL);
-                                                    //alert("Hello World!"+xy);
-                                                    });
-                        //alert(Object.values(z)[i]);
-                        //alert(xy);
-                        }
-                    }
-        for (var i = 0; i < z.length; i++) {
-                        if(Object.values(z)[i]=="telugu"){
-                                                    //var k=KANNADA_URL;
-                                                    document.getElementById(Object.values(z)[i]).addEventListener("click", function() {
-                                                    getMovies(TELUGU_URL);
-                                                    //alert("Hello World!"+xy);
-                                                    });
-                        //alert(Object.values(z)[i]);
-                        //alert(xy);
-                        }
-                    }
-        for (var i = 0; i < z.length; i++) {
-                        if(Object.values(z)[i]=="english"){
-                                                    //var k=KANNADA_URL;
-                                                    document.getElementById(Object.values(z)[i]).addEventListener("click", function() {
-                                                    getMovies(ENGLISH_URL);
-                                                    //alert("Hello World!"+xy);
-                                                    });
-                        //alert(Object.values(z)[i]);
-                        //alert(xy);
-                        }
-                    }
-        for (var i = 0; i < z.length; i++) {
-                        if(Object.values(z)[i]=="malayalam"){
-                                                    //var k=KANNADA_URL;
-                                                    document.getElementById(Object.values(z)[i]).addEventListener("click", function() {
-                                                    getMovies(MALAYALAM_URL);
-                                                    //alert("Hello World!"+xy);
-                                                    });
+/* English Movies */
+
+for (var i = 0; i < z.length; i++) {
+  if(Object.values(z)[i]=="trending"){
+    document.getElementById(Object.values(z)[i]).addEventListener("click", function() {
+      getMovies(TrendingMoviesShowsInUSToday);
+    });
+  }
+}
 
 
-                        //alert(Object.values(z)[i]);
-                        //alert(xy);
-                        }
+for (var i = 0; i < z.length; i++) {
+  if(Object.values(z)[i]=="trending-english-movies"){
+    document.getElementById(Object.values(z)[i]).addEventListener("click", function() {
+      getMovies(TrendingEnglishMovies);
+    });
+  }
+}
 
-                    }
-        for (var i = 0; i < z.length; i++) {
-                        if(Object.values(z)[i]=="trending"){
-                                                    //var k=KANNADA_URL;
-                                                    document.getElementById(Object.values(z)[i]).addEventListener("click", function() {
-                                                    getMovies(TRENDING_URL);
-                                                    //alert("Hello World!"+xy);
-                                                    });
+for (var i = 0; i < z.length; i++) {
+  if(Object.values(z)[i]=="english-movies-2023"){
+    document.getElementById(Object.values(z)[i]).addEventListener("click", function() {
+      getMovies(EnglishMovies2023);
+    });
+  }
+}
 
-                        //alert(Object.values(z)[i]);
-                        //alert(xy);
-                        }
-                    }
+for (var i = 0; i < z.length; i++) {
+  if(Object.values(z)[i]=="english-movies-2022"){
+    document.getElementById(Object.values(z)[i]).addEventListener("click", function() {
+      getMovies(EnglishMovies2022);
+    });
+  }
+}
+
+for (var i = 0; i < z.length; i++) {
+  if(Object.values(z)[i]=="english-movies-2021"){
+    document.getElementById(Object.values(z)[i]).addEventListener("click", function() {
+      getMovies(EnglishMovies2021);
+    });
+  }
+}
+
+for (var i = 0; i < z.length; i++) {
+  if(Object.values(z)[i]=="english-movies-2020"){
+    document.getElementById(Object.values(z)[i]).addEventListener("click", function() {
+      getMovies(EnglishMovies2020);
+    });
+  }
+}
+
+for (var i = 0; i < z.length; i++) {
+  if(Object.values(z)[i]=="english-movies-2019"){
+    document.getElementById(Object.values(z)[i]).addEventListener("click", function() {
+      getMovies(EnglishMovies2019);
+    });
+  }
+}
+
+for (var i = 0; i < z.length; i++) {
+  if(Object.values(z)[i]=="english-movies-2018"){
+    document.getElementById(Object.values(z)[i]).addEventListener("click", function() {
+      getMovies(EnglishMovies2018);
+    });
+  }
+}
+
+/* Telugu Movies */
+
+for (var i = 0; i < z.length; i++) {
+  if(Object.values(z)[i]=="trending-telugu-movies"){
+    document.getElementById(Object.values(z)[i]).addEventListener("click", function() {
+      getMovies(TrendingTeluguMovies);
+    });
+  }
+}
+
+for (var i = 0; i < z.length; i++) {
+  if(Object.values(z)[i]=="telugu-movies-2023"){
+    document.getElementById(Object.values(z)[i]).addEventListener("click", function() {
+      getMovies(TeluguMovies2023);
+    });
+  }
+}
+
+for (var i = 0; i < z.length; i++) {
+  if(Object.values(z)[i]=="telugu-movies-2022"){
+    document.getElementById(Object.values(z)[i]).addEventListener("click", function() {
+      getMovies(TeluguMovies2022);
+    });
+  }
+}
+
+for (var i = 0; i < z.length; i++) {
+  if(Object.values(z)[i]=="telugu-movies-2021"){
+    document.getElementById(Object.values(z)[i]).addEventListener("click", function() {
+      getMovies(TeluguMovies2021);
+    });
+  }
+}
+
+for (var i = 0; i < z.length; i++) {
+  if(Object.values(z)[i]=="telugu-movies-2020"){
+    document.getElementById(Object.values(z)[i]).addEventListener("click", function() {
+      getMovies(TeluguMovies2020);
+    });
+  }
+}
+
+for (var i = 0; i < z.length; i++) {
+  if(Object.values(z)[i]=="telugu-movies-2019"){
+    document.getElementById(Object.values(z)[i]).addEventListener("click", function() {
+      getMovies(TeluguMovies2019);
+    });
+  }
+}
+
+for (var i = 0; i < z.length; i++) {
+  if(Object.values(z)[i]=="telugu-movies-2018"){
+    document.getElementById(Object.values(z)[i]).addEventListener("click", function() {
+      getMovies(TeluguMovies2018);
+    });
+  }
+}
+
+/* Hindi Movies */
+
+for (var i = 0; i < z.length; i++) {
+  if(Object.values(z)[i]=="trending-hindi-movies"){
+    document.getElementById(Object.values(z)[i]).addEventListener("click", function() {
+      getMovies(TrendingHindiMovies);
+    });
+  }
+}
+
+for (var i = 0; i < z.length; i++) {
+  if(Object.values(z)[i]=="hindi-movies-2023"){
+    document.getElementById(Object.values(z)[i]).addEventListener("click", function() {
+      getMovies(HindiMovies2023);
+    });
+  }
+}
+
+for (var i = 0; i < z.length; i++) {
+  if(Object.values(z)[i]=="hindi-movies-2022"){
+    document.getElementById(Object.values(z)[i]).addEventListener("click", function() {
+      getMovies(HindiMovies2022);
+    });
+  }
+}
+
+for (var i = 0; i < z.length; i++) {
+  if(Object.values(z)[i]=="hindi-movies-2021"){
+    document.getElementById(Object.values(z)[i]).addEventListener("click", function() {
+      getMovies(HindiMovies2021);
+    });
+  }
+}
+
+for (var i = 0; i < z.length; i++) {
+  if(Object.values(z)[i]=="hindi-movies-2020"){
+    document.getElementById(Object.values(z)[i]).addEventListener("click", function() {
+      getMovies(HindiMovies2020);
+    });
+  }
+}
+
+for (var i = 0; i < z.length; i++) {
+  if(Object.values(z)[i]=="hindi-movies-2019"){
+    document.getElementById(Object.values(z)[i]).addEventListener("click", function() {
+      getMovies(HindiMovies2019);
+    });
+  }
+}
+
+for (var i = 0; i < z.length; i++) {
+  if(Object.values(z)[i]=="hindi-movies-2018"){
+    document.getElementById(Object.values(z)[i]).addEventListener("click", function() {
+      getMovies(HindiMovies2018);
+    });
+  }
+}
+
+/* Tamil Movies */
+
+for (var i = 0; i < z.length; i++) {
+  if(Object.values(z)[i]=="trending-tamil-movies"){
+    document.getElementById(Object.values(z)[i]).addEventListener("click", function() {
+      getMovies(TrendingTamilMovies);
+    });
+  }
+}
+
+for (var i = 0; i < z.length; i++) {
+  if(Object.values(z)[i]=="tamil-movies-2023"){
+    document.getElementById(Object.values(z)[i]).addEventListener("click", function() {
+      getMovies(TamilMovies2023);
+    });
+  }
+}
+
+for (var i = 0; i < z.length; i++) {
+  if(Object.values(z)[i]=="tamil-movies-2022"){
+    document.getElementById(Object.values(z)[i]).addEventListener("click", function() {
+      getMovies(TamilMovies2022);
+    });
+  }
+}
+
+for (var i = 0; i < z.length; i++) {
+  if(Object.values(z)[i]=="tamil-movies-2021"){
+    document.getElementById(Object.values(z)[i]).addEventListener("click", function() {
+      getMovies(TamilMovies2021);
+    });
+  }
+}
+
+for (var i = 0; i < z.length; i++) {
+  if(Object.values(z)[i]=="tamil-movies-2020"){
+    document.getElementById(Object.values(z)[i]).addEventListener("click", function() {
+      getMovies(TamilMovies2020);
+    });
+  }
+}
+
+for (var i = 0; i < z.length; i++) {
+  if(Object.values(z)[i]=="tamil-movies-2019"){
+    document.getElementById(Object.values(z)[i]).addEventListener("click", function() {
+      getMovies(TamilMovies2019);
+    });
+  }
+}
+
+for (var i = 0; i < z.length; i++) {
+  if(Object.values(z)[i]=="tamil-movies-2018"){
+    document.getElementById(Object.values(z)[i]).addEventListener("click", function() {
+      getMovies(TamilMovies2018);
+    });
+  }
+}
+
+/*Kannada Movies */
+
+for (var i = 0; i < z.length; i++) {
+  if(Object.values(z)[i]=="trending-kannada-movies"){
+    document.getElementById(Object.values(z)[i]).addEventListener("click", function() {
+      getMovies(TrendingKannadaMovies);
+    });
+  }
+}
+
+for (var i = 0; i < z.length; i++) {
+  if(Object.values(z)[i]=="kannada-movies-2023"){
+    document.getElementById(Object.values(z)[i]).addEventListener("click", function() {
+      getMovies(KannadaMovies2023);
+    });
+  }
+}
+
+for (var i = 0; i < z.length; i++) {
+  if(Object.values(z)[i]=="kannada-movies-2022"){
+    document.getElementById(Object.values(z)[i]).addEventListener("click", function() {
+      getMovies(KannadaMovies2022);
+    });
+  }
+}
+
+for (var i = 0; i < z.length; i++) {
+  if(Object.values(z)[i]=="kannada-movies-2021"){
+    document.getElementById(Object.values(z)[i]).addEventListener("click", function() {
+      getMovies(KannadaMovies2021);
+    });
+  }
+}
+
+for (var i = 0; i < z.length; i++) {
+  if(Object.values(z)[i]=="kannada-movies-2020"){
+    document.getElementById(Object.values(z)[i]).addEventListener("click", function() {
+      getMovies(KannadaMovies2020);
+    });
+  }
+}
+
+for (var i = 0; i < z.length; i++) {
+  if(Object.values(z)[i]=="kannada-movies-2019"){
+    document.getElementById(Object.values(z)[i]).addEventListener("click", function() {
+      getMovies(KannadaMovies2019);
+    });
+  }
+}
+
+for (var i = 0; i < z.length; i++) {
+  if(Object.values(z)[i]=="kannada-movies-2018"){
+    document.getElementById(Object.values(z)[i]).addEventListener("click", function() {
+      getMovies(KannadaMovies2018);
+    });
+  }
+}
+
+/* Malayalam Movies */
+
+for (var i = 0; i < z.length; i++) {
+  if(Object.values(z)[i]=="trending-malayalam-movies"){
+    document.getElementById(Object.values(z)[i]).addEventListener("click", function() {
+      getMovies(TrendingMalayalamMovies);
+    });
+  }
+}
+
+for (var i = 0; i < z.length; i++) {
+  if(Object.values(z)[i]=="malayalam-movies-2023"){
+    document.getElementById(Object.values(z)[i]).addEventListener("click", function() {
+      getMovies(MalayalamMovies2023);
+    });
+  }
+}
+
+for (var i = 0; i < z.length; i++) {
+  if(Object.values(z)[i]=="malayalam-movies-2022"){
+    document.getElementById(Object.values(z)[i]).addEventListener("click", function() {
+      getMovies(MalayalamMovies2022);
+    });
+  }
+}
+
+for (var i = 0; i < z.length; i++) {
+  if(Object.values(z)[i]=="malayalam-movies-2021"){
+    document.getElementById(Object.values(z)[i]).addEventListener("click", function() {
+      getMovies(MalayalamMovies2021);
+    });
+  }
+}
+
+for (var i = 0; i < z.length; i++) {
+  if(Object.values(z)[i]=="malayalam-movies-2020"){
+    document.getElementById(Object.values(z)[i]).addEventListener("click", function() {
+      getMovies(MalayalamMovies2020);
+    });
+  }
+}
+
+for (var i = 0; i < z.length; i++) {
+  if(Object.values(z)[i]=="tmalayalam-movies-2019"){
+    document.getElementById(Object.values(z)[i]).addEventListener("click", function() {
+      getMovies(MalayalamMovies2019);
+    });
+  }
+}
+
+for (var i = 0; i < z.length; i++) {
+  if(Object.values(z)[i]=="malayalam-movies-2018"){
+    document.getElementById(Object.values(z)[i]).addEventListener("click", function() {
+      getMovies(MalayalamMovies2018);
+    });
+  }
+}
+
+/* Get Movies Info Function */
 
 function getMovies(url) {
   lastUrl = url;
@@ -194,17 +507,18 @@ function getMovies(url) {
       }else if(currentPage>= totalPages){
         prev.classList.remove('disabled');
         next.classList.add('disabled')
-
       }else{
         prev.classList.remove('disabled');
         next.classList.remove('disabled')
       }
     }
     else{
-    main.innerHTML=`<h1 class= "noResult">No Result Found</h1>`
+      main.innerHTML=`<h1 class= "noResult">No Result Found</h1>`
     }
   })
 }
+
+/* Show Movies or Shows Info JS Code */
 
 function showMovies(data) {
     main.innerHTML = '';
@@ -229,10 +543,9 @@ function showMovies(data) {
           </div>
 
           <div class="overview">
-            <p>MovieName: ${title}</p>
             <p>Rating: ${vote1}<p>
-            <p>VoteCount: ${vote_count}<p>
-            <p>ReleaseDate: ${release_date}<p>
+            <p>Vote Count: ${vote_count}<p>
+            <p>Release Date: ${release_date}<p>
             <button class="know-more" id="${id}">Know More</button>
           </div>
         `
@@ -245,6 +558,8 @@ function showMovies(data) {
     })
 }
 
+/* Overlay Content JS Script */
+
 const overlayContent = document.getElementById('overlay-content');
 
 function openNav(movie) {
@@ -254,7 +569,6 @@ function openNav(movie) {
     if(videoData){
       document.getElementById("myNav").style.width = "100%";
       document.getElementById("myNav").style.height = "100%";
-
       var content = `
       <div>
         <article id="menu_a">
@@ -265,19 +579,26 @@ function openNav(movie) {
         </article>
       </div>
        `
-
       if(videoData.results.length > 0){
         var embed = [];
         var dots = [];
-
         videoData.results.forEach((video, idx) => {
           let {name, key, site} = video
-
           if(site == 'YouTube'){
             embed.push(`
-              <iframe width="560" height="315" src="https://www.youtube.com/embed/${key}" title="${name}" class="embed hide" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+              <iframe width="560" height="315" src="https://www.youtube.com/embed/${key}" 
+              title="${name}" 
+              class="embed hide" 
+              frameborder="0" 
+              allow="accelerometer; 
+              autoplay; 
+              clipboard-write; 
+              encrypted-media; 
+              gyroscope; 
+              picture-in-picture" 
+              allowfullscreen>
+              </iframe>
             `)
-
             dots.push(`
               <span class="dot">${idx + 1}</span>
             `)
@@ -307,9 +628,7 @@ function closeNav() {
 
 form1.addEventListener('submit', (e) => {
   e.preventDefault();
-
   const searchTerm = search.value;
-
   if(searchTerm) {
     getMovies(searchURL+'&query='+searchTerm);
   }
@@ -319,19 +638,13 @@ form1.addEventListener('submit', (e) => {
 })
 
 function getColor(vote) {
-  if(vote>= 8){
-    return 'green'
-  }
-  else if(vote >= 5){
-    return "orange"
-  }
-  else if(vote> 0){
-    return "red"
-  }
-  else{
-    return 'blue'
-  }
+  if(vote>=8){return 'green'}
+  else if(vote>=5){return "orange"}
+  else if(vote>0){return "red"}
+  else{return 'blue'}
 }
+
+/* Pagenaton JS Code */
 
 prev.addEventListener('click', () => {
   if(prevPage > 0){
@@ -363,6 +676,5 @@ function pageCall(page){
     let url = urlSplit[0] +'?'+ b
     getMovies(url);
     console.log(url)
-
   }
 }
