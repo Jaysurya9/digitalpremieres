@@ -132,15 +132,6 @@ var z=gfg_Run();
 for (var i = 0; i < z.length; i++) {
   if(Object.values(z)[i]=="trending"){
     document.getElementById(Object.values(z)[i]).addEventListener("click", function() {
-      getMovies(TrendingMoviesShowsInUSToday);
-    });
-  }
-}
-
-
-for (var i = 0; i < z.length; i++) {
-  if(Object.values(z)[i]=="trending-english-movies"){
-    document.getElementById(Object.values(z)[i]).addEventListener("click", function() {
       getMovies(TrendingEnglishMovies);
     });
   }
