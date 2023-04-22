@@ -1,24 +1,21 @@
 /* Googlefont Poppins CDN Link */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
 
-
 *{
   box-sizing: border-box;
 }
 body{
-  min-height: 100vh;
   background:cornsilk;
+  font-family: Arial, Helvetica, sans-serif;
 }
 nav{
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
-  height: 100%;
   height: 70px;
-  background: #333;
-  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
-  z-index: 99;
+  background: black;
+  z-index: 90;
 }
 nav .navbar{
   height: 100%;
@@ -27,17 +24,16 @@ nav .navbar{
   display: flex;
   align-items: center;
   justify-content: space-between;
-
   margin: auto;
   /* background: red; */
   padding: 0 50px;
 
 }
 .navbar .logo a{
+  font-family: Arial, Helvetica, sans-serif;
   font-size: 16px;
   color: cornsilk;
   text-decoration: none;
-  font-weight: 300;
 }
 nav .navbar .nav-links{
   line-height: 40px;
@@ -66,7 +62,7 @@ nav .navbar .links li a{
 .links li:hover .htmlcss-arrow,
 .links li:hover .js-arrow{
   transform: rotate(180deg);
-  }
+}
 
 nav .navbar .links li .arrow{
   /* background: red; */
@@ -144,7 +140,6 @@ nav .navbar .links li:hover .js-sub-menu{
   top: 80px;
   height: 60px;
   width: 300px;
-  background: #33;
   border-radius: 6px;
   opacity: 0;
   pointer-events: none;
@@ -182,17 +177,15 @@ nav .navbar .links li:hover .js-sub-menu{
 }
 .search-box .input-box button{
 
-margin-top:15px;
-border-radius: 20px;
-height: 32px;
+  margin-top:15px;
+  border-radius: 20px;
+  height: 32px;
   width: 50px;
   margin-left:200px;
   border-width:0;
   outline:none;
-  pointer:cursor;
+  pointer: cursor;
   top:65px;
-
-
 }
 .navbar .nav-links .sidebar-logo{
   display: none;
@@ -323,223 +316,166 @@ nav .navbar .links li .sub-menu li{
   max-width: 100%;
 }
 }
+
+
+/* Page Body Content */
 :root{
     --primary-color:white;
     --secondary-color: #001133;
 }
-
-
-
 main{
-    display:flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    background-color:#a6a6a6;
-
-
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 }
-
-
 .movie {
-    width: 180px;
-    height:320px;
-    margin: 1rem;
-    border-radius: 3px;
-    box-shadow: 0.2px 4px 5px rgba(0,0,0,0.1);
-    background-color: var(--secondary-color);
-    position:relative;
-    overflow: hidden;
-
-
-
-
-}
-
-#sample{
-        font-size:12px;
-
+  width: 180px;
+  height:320px;
+  margin: 1rem;
+  border-radius: 4px;
+  box-shadow: 0.2px 4px 5px rgba(0,0,0,0.1);
+  background-color: var(--secondary-color);
+  position:relative;
+  overflow: hidden;
 }
 .movie img{
-    width:100%;
-    height:80%;
+  width:100%;
+  height:80%;
 }
-
 .movie-info{
-    color:#eee;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 0.5rem 1rem 1rem;
-    letter-spacing: 0.1px;
-
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.5rem;
+  letter-spacing: 0.1px;
 }
-
 .movie-info h3{
-    margin-top: 0;
-    font-size:13px;
-    text-align:left;
-    font-style:Verdana Italic;
-
+  margin-top: 0;
+  font-size: 12px;
+  text-align: left;
+  font-family: Arial, Helvetica, sans-serif;
+  font-style: normal;
 }
-
-.movie-info span{
-    background-color:#ffffff;
-    padding: 0.25rem 0.5rem;
-    border-radius: 8px;
-    font-weight: bold;
-    width:40px;
-
-}
-
-.movie-info span.green{
-    color:lightGreen;
-}
-
-.movie-info span.orange{
-    color:orange;
-}
-
-.movie-info span.red{
-    color:red;
-}
-
-.noResult{
-        color:black;
-}
-
-
-.pagination{
-    display:flex;
-    margin:10px 90px;
-    align-items: center;
-    justify-content: center;
-    color:#e60000;
-
-    position: sticky;
-    font-weight:bold;
-
-
-}
-
-.page{
-    padding:20px;
-    cursor:pointer;
-}
-
-.page.disabled{
-    cursor:not-allowed;
-    color:grey;
-}
-
-.current{
-    padding: 10px 20px;
-    border-radius: 100%;
-
-    font-size: 20px;
-    font-weight: 600;
-    background-color:white;
-}
-
-
 .overview{
-
-    position:absolute;
-    width: 180px;
-    height:320px;
-    left:0;
-    right:0;
-    bottom:0;
-    background-color: black;
-    padding: 1rem;
-    max-height: 100%;
-    transform: scale(0);
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 180px;
+  height:300px;
+  max-height: 100%;
+  background-color: black;
+  color: white;
+  padding: 1rem;
+  transform: scale(0);
   transition: .9s ease;
-  color:white;
   transform-style: preserve-3d;
-
-
 }
 .movie:hover .overview{
-
-    transform: scale(1);
-
+  transform: scale(0.75);
 }
-
+.movie-info span{
+  background-color:#ffffff;
+  padding: 0.5rem;
+  border-radius: 8px;
+  font-weight: bold;
+  width:40px;
+}
 .know-more{
-    background-color: orange;
-    color:white;
-    font-size: 16px;
-    font-weight: bold;
-    border:0;
-    border-radius: 50px;
-    padding: 10px 20px;
-    margin-top: 5px;
+  background-color: white;
+  color: black;
+  font-size: 16px;
+  font-weight: bold;
+  border: 0;
+  border-radius: 50px;
+  padding: 10px 20px;
+  margin-top: 5px;
 }
-
-
 .no-results{
-    color:white;
+  color:white;
 }
-
 .overlay {
-    /* Height & width depends on how you want to reveal the overlay (see JS below) */
-    height: 100%;
-    width: 0;
-    position: fixed; /* Stay in place */
-    z-index: 1; /* Sit on top */
-    left: 0;
-    top: 0;
-    background-color: rgb(0,0,0); /* Black fallback color */
-    background-color: rgba(0,0,0, 0.9); /* Black w/opacity */
-    overflow-x: hidden; /* Disable horizontal scroll */
-    transition: 0.5s; /* 0.5 second transition effect to slide in or slide down the overlay (height or width, depending on reveal) */
-  }
-
-   .overlay-content {
-    position: relative;
-    top: 10%; /* 25% from the top */
-    width: 100%; /* 100% width */
-    text-align: center; /* Centered text/links */
-    margin-top: 30px; /* 30px top margin to avoid conflict with the close button on smaller screens */
-  }
-  .overlay a {
-
-    padding: 8px;
-    text-decoration: none;
-    font-size: 36px;
-    color: #818181;
-    display: block; /* Display block instead of inline */
-    transition: 0.1s; /* Transition effects on hover (color) */
-  }
-
-  .overlay a:hover, .overlay a:focus {
-    color: red;
-  }
+  /* Height & width depends on how you want to reveal the overlay (see JS below) */
+  height: 100%;
+  width: 0;
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  background-color: rgb(0,0,0); /* Black fallback color */
+  background-color: rgba(0,0,0, 0.9); /* Black w/opacity */
+  overflow-x: hidden; /* Disable horizontal scroll */
+  transition: 0.5s; /* 0.5 second transition effect to slide in or slide down the overlay (height or width, depending on reveal) */
+}
+.overlay-content {
+  position: relative;
+  top: 10%; /* 25% from the top */
+  width: 100%; /* 100% width */
+  text-align: center; /* Centered text/links */
+  margin-top: 30px; /* 30px top margin to avoid conflict with the close button on smaller screens */
+}
+.overlay a {
+  padding: 8px;
+  text-decoration: none;
+  font-size: 36px;
+  color: #818181;
+  display: block; /* Display block instead of inline */
+  transition: 0.1s; /* Transition effects on hover (color) */
+}
+.overlay a:hover, .overlay a:focus {
+  color: red;
+}
+.overlay .closebtn {
+  position: absolute;
+  top: 40px;
+  right: 45px;
+  font-size: 60px;
+}
+@media screen and (max-height: 450px; max-width:200px;) {
+  .overlay a {font-size: 40px}
   .overlay .closebtn {
-    position: absolute;
-    top: 40px;
-    right: 45px;
-    font-size: 60px;
-
+    font-size: 40px;
+    top: 15px;
+    right: 35px;
   }
-  @media screen and (max-height: 450px; max-width:200px;) {
-    .overlay a {font-size: 40px}
-    .overlay .closebtn {
-      font-size: 40px;
-      top: 15px;
-      right: 35px;
-    }
-  }
+}
 .embed.hide{
   display:inline;
-  }
-
-  .embed.show{
-      display: inline;
-  }
+}
+.embed.show{
+  display: inline;
+}
 #resultq{
-color:white;
-
-
+  color:white;
 }
 
+/* PageNation CSS */
+.pagination{
+  display:flex;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 70px;
+  color:red;
+  align-items: center;
+  justify-content: center;
+  position: sticky;
+}
+.page{
+  padding: 1rem;
+  cursor:pointer;
+}
+.page.disabled{
+  cursor:not-allowed;
+  color:grey;
+}
+.current{
+  padding: 10px 20px;
+  border-radius: 50%;
+  background-color:#001133;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 12px;
+  color:white;
+}
