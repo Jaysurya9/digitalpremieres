@@ -144,6 +144,14 @@ for (var i = 0; i < z.length; i++) {
 }
 
 for (var i = 0; i < z.length; i++) {
+  if(Object.values(z)[i]=="english-movies-2024"){
+    document.getElementById(Object.values(z)[i]).addEventListener("click", function() {
+      getMovies(EnglishMovies2024);
+    });
+  }
+}
+
+for (var i = 0; i < z.length; i++) {
   if(Object.values(z)[i]=="english-movies-2023"){
     document.getElementById(Object.values(z)[i]).addEventListener("click", function() {
       getMovies(EnglishMovies2023);
@@ -197,6 +205,14 @@ for (var i = 0; i < z.length; i++) {
   if(Object.values(z)[i]=="trending-telugu-movies"){
     document.getElementById(Object.values(z)[i]).addEventListener("click", function() {
       getMovies(TrendingTeluguMovies);
+    });
+  }
+}
+
+for (var i = 0; i < z.length; i++) {
+  if(Object.values(z)[i]=="telugu-movies-2024"){
+    document.getElementById(Object.values(z)[i]).addEventListener("click", function() {
+      getMovies(TeluguMovies2024);
     });
   }
 }
@@ -260,6 +276,14 @@ for (var i = 0; i < z.length; i++) {
 }
 
 for (var i = 0; i < z.length; i++) {
+  if(Object.values(z)[i]=="hindi-movies-2024"){
+    document.getElementById(Object.values(z)[i]).addEventListener("click", function() {
+      getMovies(HindiMovies2024);
+    });
+  }
+}
+
+for (var i = 0; i < z.length; i++) {
   if(Object.values(z)[i]=="hindi-movies-2023"){
     document.getElementById(Object.values(z)[i]).addEventListener("click", function() {
       getMovies(HindiMovies2023);
@@ -313,6 +337,14 @@ for (var i = 0; i < z.length; i++) {
   if(Object.values(z)[i]=="trending-tamil-movies"){
     document.getElementById(Object.values(z)[i]).addEventListener("click", function() {
       getMovies(TrendingTamilMovies);
+    });
+  }
+}
+
+for (var i = 0; i < z.length; i++) {
+  if(Object.values(z)[i]=="tamil-movies-2024"){
+    document.getElementById(Object.values(z)[i]).addEventListener("click", function() {
+      getMovies(TamilMovies2024);
     });
   }
 }
@@ -376,6 +408,14 @@ for (var i = 0; i < z.length; i++) {
 }
 
 for (var i = 0; i < z.length; i++) {
+  if(Object.values(z)[i]=="kannada-movies-2024"){
+    document.getElementById(Object.values(z)[i]).addEventListener("click", function() {
+      getMovies(KannadaMovies2024);
+    });
+  }
+}
+
+for (var i = 0; i < z.length; i++) {
   if(Object.values(z)[i]=="kannada-movies-2023"){
     document.getElementById(Object.values(z)[i]).addEventListener("click", function() {
       getMovies(KannadaMovies2023);
@@ -429,6 +469,14 @@ for (var i = 0; i < z.length; i++) {
   if(Object.values(z)[i]=="trending-malayalam-movies"){
     document.getElementById(Object.values(z)[i]).addEventListener("click", function() {
       getMovies(TrendingMalayalamMovies);
+    });
+  }
+}
+
+for (var i = 0; i < z.length; i++) {
+  if(Object.values(z)[i]=="malayalam-movies-2024"){
+    document.getElementById(Object.values(z)[i]).addEventListener("click", function() {
+      getMovies(MalayalamMovies2024);
     });
   }
 }
