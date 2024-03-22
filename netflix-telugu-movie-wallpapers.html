@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Netflix Telugu Movie Wallpapers HD</title>
+    <style>
+        /* CSS styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 20px 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            margin-left: 20px;
+        }
+
+        .logo h1 {
+            font-size: 24px;
+        }
+
+        nav ul {
+            list-style-type: none;
+            display: flex;
+        }
+
+        nav ul li {
+            margin-right: 20px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #fff;
+        }
+
+        .hero {
+            text-align: center;
+            padding: 100px 0;
+            background-image: url('hero-bg.jpg');
+            background-size: cover;
+            color: #fff;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #ff6600;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        .btn:hover {
+            background-color: #cc5500;
+        }
+
+        .gallery {
+            padding: 50px 0;
+            text-align: center;
+        }
+
+        .gallery h2 {
+            margin-bottom: 20px;
+        }
+
+        .images {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            grid-gap: 20px;
+        }
+
+        .images img {
+            width: 100%;
+            border-radius: 5px;
+        }
+
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 20px 0;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <h1>Movie Premieres</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="/">Home</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="hero">
+        <h2>Netflix Telugu Movie Wallpapers HD</h2>
+        <p>Discover Netflix Telugu Movie Wallpapers your desktop and mobile devices.</p>
+        <a href="#" class="btn">Explore</a>
+    </div>
+
+    <section class="gallery">
+        <h2>Popular Wallpapers</h2>
+        <div class="images">
+            <!-- Images will be populated dynamically using JavaScript -->
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Movie Premieres. Some rights reserved.</p>
+    </footer>
+
+    <script>
+        // JavaScript code
+        // Dummy data for images (replace with actual data)
+        const images = [
+            'Netflix-Telugu-Movie-Posters/Fighter-(2024)-Telugu-Movie-Netflix.jpg',
+            'Netflix-Telugu-Movie-Posters/Guntur-Kaaram-(2024)-Telugu-Movie-Netflix.jpg',
+            'Netflix-Telugu-Movie-Posters/Khushi-(2023)-Telugu-Movie-Netflix.jpg',
+            'Netflix-Telugu-Movie-Posters/Merry-Christmas-(2024)-Telugu-Movie-Netflix.jpg',
+            'Netflix-Telugu-Movie-Posters/Salaar-(2024)-Telugu-Movie-Netflix.jpg',
+            'Netflix-Telugu-Movie-Posters/Miss-Shetty-Mr-Polishetty-(2023)-Telugu-Movie-Netflix.jpg',
+            // Add more image URLs as needed
+        ];
+
+        // Function to dynamically populate the gallery section with images
+        function populateGallery() {
+            const gallery = document.querySelector('.images');
+            images.forEach(image => {
+                const imgElement = document.createElement('img');
+                imgElement.src = image;
+                gallery.appendChild(imgElement);
+            });
+        }
+
+        // Call the function to populate the gallery
+        populateGallery();
+    </script>
+</body>
+</html>
