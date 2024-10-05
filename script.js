@@ -38,7 +38,6 @@ jsArrow.onclick = function() {
 
 const BASE_URL = 'https://api.themoviedb.org/3';
 const API_KEY = 'api_key=9a85a018f878f3af62f324c75c332248';
-
 const IMG_URL = 'https://image.tmdb.org/t/p/w500';
 const searchURL = BASE_URL + '/search/movie?'+API_KEY;
 
@@ -54,6 +53,7 @@ const EnglishMovies2019 = BASE_URL + '/discover/movie?'+API_KEY+'&primary_releas
 const EnglishMovies2018 = BASE_URL + '/discover/movie?'+API_KEY+'&primary_release_year=2018&with_original_language=en';
 
 const TrendingTeluguMovies = BASE_URL + '/discover/movie?'+API_KEY+'&with_original_language=te';
+const TeluguMovies2025 = BASE_URL + '/discover/movie?'+API_KEY+'&primary_release_year=2025&with_original_language=te';
 const TeluguMovies2024 = BASE_URL + '/discover/movie?'+API_KEY+'&primary_release_year=2024&with_original_language=te';
 const TeluguMovies2023 = BASE_URL + '/discover/movie?'+API_KEY+'&primary_release_year=2023&with_original_language=te';
 const TeluguMovies2022 = BASE_URL + '/discover/movie?'+API_KEY+'&primary_release_year=2022&with_original_language=te';
@@ -63,6 +63,7 @@ const TeluguMovies2019 = BASE_URL + '/discover/movie?'+API_KEY+'&primary_release
 const TeluguMovies2018 = BASE_URL + '/discover/movie?'+API_KEY+'&primary_release_year=2018&with_original_language=te';
 
 const TrendingHindiMovies = BASE_URL + '/discover/movie?'+API_KEY+'&with_original_language=hi';
+const HindiMovies2025 = BASE_URL + '/discover/movie?'+API_KEY+'&primary_release_year=2025&with_original_language=hi';
 const HindiMovies2024 = BASE_URL + '/discover/movie?'+API_KEY+'&primary_release_year=2024&with_original_language=hi';
 const HindiMovies2023 = BASE_URL + '/discover/movie?'+API_KEY+'&primary_release_year=2023&with_original_language=hi';
 const HindiMovies2022 = BASE_URL + '/discover/movie?'+API_KEY+'&primary_release_year=2022&with_original_language=hi';
@@ -72,6 +73,7 @@ const HindiMovies2019 = BASE_URL + '/discover/movie?'+API_KEY+'&primary_release_
 const HindiMovies2018 = BASE_URL + '/discover/movie?'+API_KEY+'&primary_release_year=2018&with_original_language=hi';
 
 const TrendingTamilMovies = BASE_URL + '/discover/movie?'+API_KEY+'&with_original_language=ta';
+const TamilMovies2025 = BASE_URL + '/discover/movie?'+API_KEY+'&primary_release_year=2025&with_original_language=ta';
 const TamilMovies2024 = BASE_URL + '/discover/movie?'+API_KEY+'&primary_release_year=2024&with_original_language=ta';
 const TamilMovies2023 = BASE_URL + '/discover/movie?'+API_KEY+'&primary_release_year=2023&with_original_language=ta';
 const TamilMovies2022 = BASE_URL + '/discover/movie?'+API_KEY+'&primary_release_year=2022&with_original_language=ta';
@@ -81,6 +83,7 @@ const TamilMovies2019 = BASE_URL + '/discover/movie?'+API_KEY+'&primary_release_
 const TamilMovies2018 = BASE_URL + '/discover/movie?'+API_KEY+'&primary_release_year=2018&with_original_language=ta';
 
 const TrendingKannadaMovies = BASE_URL + '/discover/movie?'+API_KEY+'&with_original_language=kn';
+const KannadaMovies2025 = BASE_URL + '/discover/movie?'+API_KEY+'&primary_release_year=2025&with_original_language=kn';
 const KannadaMovies2024 = BASE_URL + '/discover/movie?'+API_KEY+'&primary_release_year=2024&with_original_language=kn';
 const KannadaMovies2023 = BASE_URL + '/discover/movie?'+API_KEY+'&primary_release_year=2023&with_original_language=kn';
 const KannadaMovies2022 = BASE_URL + '/discover/movie?'+API_KEY+'&primary_release_year=2022&with_original_language=kn';
@@ -91,6 +94,7 @@ const KannadaMovies2018 = BASE_URL + '/discover/movie?'+API_KEY+'&primary_releas
 
 
 const TrendingMalayalamMovies = BASE_URL + '/discover/movie?'+API_KEY+'&with_original_language=ml';
+const MalayalamMovies2025 = BASE_URL + '/discover/movie?'+API_KEY+'&primary_release_year=2025&with_original_language=ml';
 const MalayalamMovies2024 = BASE_URL + '/discover/movie?'+API_KEY+'&primary_release_year=2024&with_original_language=ml';
 const MalayalamMovies2023 = BASE_URL + '/discover/movie?'+API_KEY+'&primary_release_year=2023&with_original_language=ml';
 const MalayalamMovies2022 = BASE_URL + '/discover/movie?'+API_KEY+'&primary_release_year=2022&with_original_language=ml';
@@ -98,7 +102,6 @@ const MalayalamMovies2021 = BASE_URL + '/discover/movie?'+API_KEY+'&primary_rele
 const MalayalamMovies2020 = BASE_URL + '/discover/movie?'+API_KEY+'&primary_release_year=2020&with_original_language=ml';
 const MalayalamMovies2019 = BASE_URL + '/discover/movie?'+API_KEY+'&primary_release_year=2019&with_original_language=ml';
 const MalayalamMovies2018 = BASE_URL + '/discover/movie?'+API_KEY+'&primary_release_year=2018&with_original_language=ml';
-
 
 const main = document.getElementById('main');
 const form =  document.getElementById('form');
@@ -118,7 +121,6 @@ var totalPages = 100;
 getMovies(TrendingMoviesShowsInUSToday);
 
 /* Get Movie and Shows Data Functions */
-
 var el_up = document.getElementById("");
 var el_down = document.getElementById("");
 function gfg_Run() {
